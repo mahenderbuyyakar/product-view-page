@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product view page</title>
+    <link rel="stylesheet" href="product view page style.css">
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/mahenderbuyyakar/PNG-images/main/flavicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <!-- Top header bar start -->
+        <div class="header-top" role="header top">
+            <div class="social-media-img" role="image holder">
+                <img src="./png images/facebook round.png" alt="facebook-icon" role="icon" aria-label="facebook icon">
+                <img src="./png images/youtube.png" alt="youtube-icon" role="icon" aria-label="youtube icon">
+                <img src="./png images/twitter.png" alt="twitter-icon" role="icon" aria-label="twitter icon">
+            </div>
+            <div class="search-box" role="search">
+                <input type="search" name="searchbox" role="form" placeholder="Search Products and Brands"
+                    aria-labelledby="search-box">
+                <img src="./png images/magglass.png" alt="search-icon" role="icon" aria-label="magnifying glass icon">
+            </div>
+            <div class="details-section" role="details container">
+                <img src="./png images/contact icon.png" alt="call-icon" role="icon" aria-label="contact icon">
+                <a id="contact-number" href="" role="link">+91
+                    9838203708</a>
+                <a href="" role="link">Sell on Company</a>
+                <a href="" role="link">Download App</a>
+                <img src="./png images/langicon.png" id="flag-icon" alt="language-icon" role="icon"
+                    aria-label="language icon">
+                <form action="" aria-label="form">
+                    <select name="language-select" id="language-select" aria-labelledby="select box">
+                        <option value="India" role="option" aria-labelledby="Option1">India</option>
+                        <option value="UK" role="option" aria-labelledby="Option1">UK</option>
+                        <option value="Germany" role="option" aria-labelledby="Option2">Germany</option>
+                        <option value="France" role="option" aria-labelledby="Option3">France</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <!-- Top header Bar end -->
+
+        <!-- Bottom Header start -->
+        <div class="sticky-bar bg-white" id="sticky-section">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container-fluid">
+                    <img src="./png images/logo.png" alt="Swag Of India icon" class="swag-logo">
+                    <div class="input-group d-xl-none d-lg-none" id="search-box-container">
+                        <input type="search" id="search-box-hidden" class="form-control" placeholder="Search products"
+                            aria-label="search box" aria-describedby="basic-addon1">
+                        <span id="basic-addon1"><img src="./png images/magglass.png" alt="search-icon" role="icon"
+                                aria-labelledby="magnifying glass icon">
+                        </span>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Latest</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Pages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Contact</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categories
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Men</a></li>
+                                    <li><a class="dropdown-item" href="#">Women</a></li>
+                                    <li><a class="dropdown-item" href="#">Ethnic</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form>
+                            <button type="button" class="btns" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                SIGN IN
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Login page modal start-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="./png images/logo.png" alt="Swag Of India icon" class="logo-india">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <!-- Login tab -->
+                            <li class="navs-item" role="presentation">
+                                <button class="navs-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#home"
+                                    type="button" role="tab" aria-controls="login" aria-selected="true">LOGIN</button>
+                            </li>
+                            <!-- Create account tab -->
+                            <li class="navs-item" role="presentation">
+                                <button class="navs-link" id="tab2" data-bs-toggle="tab" data-bs-target="#profile"
+                                    type="button" role="tab" aria-controls="create-account" aria-selected="false">CREATE
+                                    ACCOUNT</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="login-tab">
+                                <form action="#">
+                                    <p class="email">Email</p>
+                                    <input type="text" class="box" id="email" value="" placeholder="Enter mail"><br>
+                                    <p class="password">password</p>
+                                    <input type="password" class="box" name="password" id="password"
+                                        placeholder="Password"><br>
+                                    <button type="button" class="btn-signin">SIGNIN</button><br>
+                                    <button type="button" class="forgot-button">FORGOT YOUR PASSWORD?</button>
+                                    <!-- footer in login page -->
+                                    <p class="text-login">Or Login With</p>
+                                    <div class="media-icons">
+                                        <img src="./png images/login modal fb icon.png" alt="facebook image">
+                                        <img src="./png images/login modal twitter icon.png" alt="Twitter icon">
+                                        <img src="./png images/login modal google icon.png" alt="google icon">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel"
+                                aria-labelledby="create-account-tab">
+                                <p class="username">Username</p>
+                                <input type="text" class="box" id="Username" value="" placeholder="Enter Username"><br>
+                                <p class="email">Email</p>
+                                <input type="text" class="box" id="email" value="" placeholder="Enter email"><br>
+                                <p class="password">password</p>
+                                <input type="password" class="box" name="password" id="password"
+                                    placeholder="Password"><br>
+                                <button type="button" class="btn-signin">CREATE ACCOUNT</button><br>
+                                <!-- footer in Create account page -->
+                                <p class="text-login">Or Login With</p>
+                                <div class="media-icons">
+                                    <img src="./png images/login modal fb icon.png" alt="facebook image">
+                                    <img src="./png images/login modal twitter icon.png" alt="Twitter icon">
+                                    <img src="./png images/login modal google icon.png" alt="google icon">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Login page model end -->
+
+    <a href="#">
+        <img src="./png images/go to top icon.png" alt="Go to top icon" class="go-to-top" id="scroll-btn"></a>
+
+    <!-- Bottom header bar end -->
+
+    <!-- PRODUCT VIEW PAGE START -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="text-dark" href="#">Home</a></li>
+            <li class="breadcrumb-item font-weight-normal" aria-current="page"><a class="text-dark"
+                    href="#">Categories</a></li>
+            <li class="breadcrumb-item" aria-current="page"><a class="active" href="#">Women</a>
+            </li>
+        </ol>
+    </nav>
+    <div
+        class="major-container d-flex flex-lg-row align-items-lg-start justify-content-lg-center flex-md-column align-items-md-start justify-content-md-start flex-sm-column align-items-sm-center justify-content-sm-center">
+        <div
+            class="left-major-container container-fluid d-md-flex flex-md-column align-items-md-center d-sm-flex flex-sm-column align-items-sm-center justify-content-sm-center">
+            <div class="row">
+                <div class="img-col-1 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <img src="./png images/product3.png" alt="product3 image">
+                    <img src="./png images/product3.png" alt="product3 image">
+                    <img src="./png images/product3.png" alt="product3 image">
+                    <img src="./png images/product3.png" alt="product3 image">
+                </div>
+                <div class="img-col-2 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    <img src="./png images/product3.png" alt="product3 image">
+                </div>
+            </div>
+        </div>
+        <div class="right-major-container">
+            <h5 class="font-weight-bold">Classic Women's Sweater</h5>
+            <div class="stars-group d-flex align-items-center mt-2" id="starsgroup">
+                <a href="#review-box">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star-empty.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                </a>
+                <span class="ml-2">
+                    <p class="d-inline mr-2 text-success font-weight-bold">39,122 ratings</p>|<p
+                        class="d-inline ml-2 text-success font-weight-bold">1000+ answered questions</p>
+                </span>
+            </div>
+            <p class="pricing mt-4 mb-0"><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                    class="offer font-weight-bold ml-1">(60%Off)</span></p>
+            <div class="description-text">
+                <h6 class="font-weight-bold mt-4">Short Description</h6>
+                <p>This sleeve less dress is good looking with best color. <br>
+                    It is washable and dryable .color does not vanish. <br> It
+                    is comfortable during any seasons. <br>
+                    modern look</p>
+            </div>
+            <div class="select-container d-flex flex-row justify-content-between">
+                <div class="select-size">
+                    <h6>SELECT SIZE</h6>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-dark">39</button>
+                        <button type="button" class="btn btn-outline-dark">40</button>
+                        <button type="button" class="btn btn-outline-dark">42</button>
+                        <button type="button" class="btn btn-outline-dark">44</button>
+                    </div>
+                </div>
+                <div class="select-quantity">
+                    <h6>QTY</h6>
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-primary border border-dark text-dark">-</button>
+                        <button type="button" class="btn btn-outline-primary border border-dark text-dark">1</button>
+                        <button type="button" class="btn btn-outline-primary border border-dark text-dark">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-collection d-flex justify-content-between align-items-center">
+                <button type="button" class="shopping cart-button btn-default" aria-label="cart button">ADD TO
+                    CART</button>
+                <button type="button" class="buynow-button btn-default" aria-label="buy now button">BUY NOW</button>
+                <a href="#"><img src="./png images/heart-icon-trans.png" alt="heart-button"></a>
+            </div>
+            <div class="share-on-social mt-4 d-flex justify-content-between align-items-center">
+                <h6>SHARE THIS</h6>
+                <img src="./png images/facebook round.png" alt="facebook-icon" role="icon" aria-label="facebook icon">
+                <img src="./png images/youtube.png" alt="youtube-icon" role="icon" aria-label="youtube icon">
+                <img src="./png images/twitter.png" alt="twitter-icon" role="icon" aria-label="twitter icon">
+            </div>
+            <div class="delivery-support mt-3 d-flex justify-content-between align-items-center">
+                <div class="delivery">
+                    <span><img class="mr-2" src="./png images/delivery logo.png" alt="">DELIVERY &amp; RETURN</span>
+                </div>
+                <div class="support">
+                    <span><img class="mr-2" src="./png images/help desk logo.png" alt="">ONLINE SUPPORT 24/7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs Section -->
+    <ul class="desc-tabs nav nav-tabs" id="myReviewTab" role="tablist">
+        <li class="nav-item">
+            <a href="#description" id="tab3" class="nav-link active" aria-controls="login" aria-selected="true"
+                role="tab" tabindex="1" data-toggle="tab">Description</a>
+        </li>
+        <li class="nav-item">
+            <a href="#sizing" id="tab4" class="nav-link" aria-controls="create-account" aria-selected="false" role="tab"
+                tabindex="0" data-toggle="tab">Sizing Guide</a>
+        </li>
+        <li class="nav-item">
+            <a href="#assigned" id="tab5" class="nav-link" aria-controls="create-account" aria-selected="false"
+                role="tab" tabindex="0" data-toggle="tab">Assigned Tags</a>
+        </li>
+        <li class="nav-item">
+            <a href="#custom" id="tab6" class="nav-link" aria-controls="create-account" aria-selected="false" role="tab"
+                tabindex="0" data-toggle="tab">Many Custom Tabs</a>
+        </li>
+    </ul>
+    <div class="desc-tabs-content tab-content" id="myReviewTabContent">
+        <div class="tab-pane active" id="description" role="tabpanel" aria-labelledby="tab3" aria-hidden="false">
+            <h6 class="mt-5">Give you a complete account of the system</h6>
+            <p>You’ve probably heard of Lorem Ipsum before – it’s the most-used dummy text excerpt out there.
+                People use it because it has a fairly normal distribution of letters and words
+                (making it look like normal English), but it’s also Latin,
+                which means your average reader won’t get distracted by trying to read it.
+                It’s perfect for showcasing design work as it should look when fleshed out with text,
+                because it allows viewers to focus on the design work itself, instead of the text.
+                It’s also a great way to showcase the functionality of programs like word processors, font types, and
+                more.</p>
+            <p>We’ve taken Lorem Ipsum to the next level with our HTML-Ipsum tool.
+                As you can see, this Lorem Ipsum is tailor-made for websites and other online projects that are based in
+                HTML.
+                Most web design projects use Lorem Ipsum excerpts to begin with,
+                but you always have to spend an annoying extra minute or two formatting it properly for the web.</p>
+            <p>Maybe you have a custom-styled ordered list you want to show off, or
+                maybe you just want a long chunk of Lorem Ipsum that’s already wrapped in paragraph tags.
+                No matter the need, we’ve put together a number of Lorem Ipsum samples ready to go
+                with HTML tags and formatting in place.
+                All you have to do is click the heading of any section on this page, and
+                that HTML-Ipsum block is copied to your clipboard and ready to be loaded into a website redesign
+                template,
+                brand new design mockup, or any other digital project you might need dummy text for.</p>
+            <p>You’ve probably heard of Lorem Ipsum before – it’s the most-used dummy text excerpt out there.
+                People use it because it has a fairly normal distribution of letters and words
+                (making it look like normal English), but it’s also Latin,
+                which means your average reader won’t get distracted by trying to read it.
+                It’s perfect for showcasing design work as it should look when fleshed out with text,
+                because it allows viewers to focus on the design work itself, instead of the text.
+                It’s also a great way to showcase the functionality of programs like word processors, font types, and
+                more.</p>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="review-container" id="review-box">
+        <aside class="grid-container-1 p-4">
+            <h6 class="font-weight-bold">Customer Reviews</h6>
+            <div
+                class="stars-holder d-flex flex-xl-row justify-content-xl-start align-items-xl-end flex-lg-row justify-content-lg-start align-items-lg-end flex-md-column align-items-md-start justify-content-md-center flex-sm-column align-items-sm-center ">
+                <div class="stars-group mt-2">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star-empty.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                </div>
+                <span class=" ml-lg-2 ml-md-0">4 out of 5 stars</span>
+            </div>
+            <small>30 customer ratings</small>
+            <div class="progress-div">
+                <span>5 Star</span>
+                <div class="progress">
+                    <div class="progress-bar bg-warning font-weight-bold" role="progressbar" style="width: 87%"
+                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span>80%</span>
+            </div>
+            <div class="progress-div">
+                <span>4 Star</span>
+                <div class="progress">
+                    <div class="progress-bar bg-warning font-weight-bold" role="progressbar" style="width: 80%"
+                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span>80%</span>
+            </div>
+            <div class="progress-div">
+                <span>3 Star</span>
+                <div class="progress">
+                    <div class="progress-bar bg-warning font-weight-bold" role="progressbar" style="width: 40%"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span>40%</span>
+            </div>
+            <div class="progress-div">
+                <span>2 Star</span>
+                <div class="progress">
+                    <div class="progress-bar bg-warning font-weight-bold" role="progressbar" style="width: 10%"
+                        aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span>10%</span>
+            </div>
+            <div class="progress-div">
+                <span>1 Star</span>
+                <div class="progress">
+                    <div class="progress-bar bg-warning font-weight-bold" role="progressbar" style="width: 20%"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span>20%</span>
+            </div>
+            <div class="write-review mt-5">
+                <h6 class="font-weight-bold">Review this Product</h6>
+                <p>Share your thoughts with other customers</p>
+                <button type="button" class="review-button btn-default" aria-label="cart button">Write a Product
+                    Review</button>
+            </div>
+        </aside>
+        <div class="grid-container-2 p-4">
+            <div class="review review-1">
+                <img src="./png images/profile icon.png" alt="user image"><span class="ml-3">Dr. John Varghese
+                    Parampil</span>
+                <div class="stars-group d-flex align-items-start mt-2 mb-0">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star-empty.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <span class="ml-2 font-weight-bold">Early delivery. Very reasonable price<p></p></span>
+                </div>
+                <small>Reviewed in India on 10 sep 2021</small>
+                <p class="verified text-danger font-weight-bold">Verified Purchase</p>
+                <p class="product-desc">Manufactur year is 2018 so company rejected online registration for extended
+                    warranty
+                    But they said this product is eligible for normal warranty for the balance three years.
+                    when i compare this price i found it is reasonable.
+                </p>
+                <div class="helpful-content">
+                    <button type="button" class="review-button btn-default mr-3"
+                        aria-label="cart button">Helpful</button> | <span class="ml-2 mr-2"><a
+                            href="#">Comment</a></span> | <span class="ml-2"><a href="#">Report Abuse</a></span>
+                </div>
+            </div>
+            <div class="review review-2 mt-5">
+                <img src="./png images/profile icon.png" alt="user image"><span class="ml-3">Dr. John Varghese
+                    Parampil</span>
+                <div class="stars-group d-flex align-items-start mt-2 mb-0">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <img class="stars" src="./png images/star-empty.png" alt="star-rating" role="icon"
+                        aria-label="star rating">
+                    <span class="ml-2 font-weight-bold">Early delivery. Very reasonable price<p></p></span>
+                </div>
+                <small>Reviewed in India on 10 sep 2021</small>
+                <p class="verified text-danger font-weight-bold">Verified Purchase</p>
+                <p class="product-desc">Manufactur year is 2018 so company rejected online registration for extended
+                    warranty
+                    But they said this product is eligible for normal warranty for the balance three years.
+                    when i compare this price i found it is reasonable.
+                </p>
+                <div class="helpful-content">
+                    <button type="button" class="review-button btn-default mr-3"
+                        aria-label="cart button">Helpful</button> | <span class="ml-2 mr-2"><a
+                            href="#">Comment</a></span> | <span class="ml-2"><a href="#">Report Abuse</a></span>
+                </div>
+            </div>
+            <p class="see-more"><a href="#">See all reviews from India</a></p>
+        </div>
+    </div>
+
+    <!-- Bottom carousel Slides Section Start -->
+    <section class="related-products">
+        <div class="container my-3">
+            <h2 class="mb-5">RELATED PRODUCTS</h2>
+            <div class="row text-center mx-auto my-auto">
+                <div id="carouselexample" class="carousel slide" data-ride="carousel">
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card col-12 col-md-4" style="width: 18rem; border-width: 0;">
+                                <img src="./png images/product1.png" class="card-img-top" alt="image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dummy Text Lorel</h5>
+                                    <p><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                                            class="offer">(60%Off)</span></p>
+                                    <div class="stars-group d-flex justify-content-center align-items-center">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star-empty.png" alt="star-rating"
+                                            role="icon" aria-label="star rating">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-12 col-md-4" style="width: 18rem; border-width: 0;">
+                                <img src="./png images/product2.png" class="card-img-top" alt="image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dummy Text Lorel</h5>
+                                    <p><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                                            class="offer">(60%Off)</span></p>
+                                    <div class="stars-group d-flex justify-content-center align-items-center">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star-empty.png" alt="star-rating"
+                                            role="icon" aria-label="star rating">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-12 col-md-4" style="width: 18rem; border-width: 0;">
+                                <img src="./png images/product3.png" class="card-img-top" alt="image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dummy Text Lorel</h5>
+                                    <p><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                                            class="offer">(60%Off)</span></p>
+                                    <div class="stars-group d-flex justify-content-center align-items-center">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star-empty.png" alt="star-rating"
+                                            role="icon" aria-label="star rating">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-12 col-md-4" style="width: 18rem; border-width: 0;">
+                                <img src="./png images/product4.png" class="card-img-top" alt="image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dummy Text Lorel</h5>
+                                    <p><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                                            class="offer">(60%Off)</span></p>
+                                    <div class="stars-group d-flex justify-content-center align-items-center">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star-empty.png" alt="star-rating"
+                                            role="icon" aria-label="star rating">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-12 col-md-4" style="width: 18rem; border-width: 0;">
+                                <img src="./png images/product5.png" class="card-img-top" alt="image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dummy Text Lorel</h5>
+                                    <p><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                                            class="offer">(60%Off)</span></p>
+                                    <div class="stars-group d-flex justify-content-center align-items-center">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star-empty.png" alt="star-rating"
+                                            role="icon" aria-label="star rating">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="card col-12 col-md-4" style="width: 18rem; border-width: 0;">
+                                <img src="./png images/product5.png" class="card-img-top" alt="image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dummy Text Lorel</h5>
+                                    <p><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                                            class="offer">(60%Off)</span></p>
+                                    <div class="stars-group d-flex justify-content-center align-items-center">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star-empty.png" alt="star-rating"
+                                            role="icon" aria-label="star rating">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-12 col-md-4" style="width: 18rem; border-width: 0;">
+                                <img src="./png images/product6.png" class="card-img-top" alt="image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dummy Text Lorel</h5>
+                                    <p><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                                            class="offer">(60%Off)</span></p>
+                                    <div class="stars-group d-flex justify-content-center align-items-center">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star-empty.png" alt="star-rating"
+                                            role="icon" aria-label="star rating">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-12 col-md-4" style="width: 18rem; border-width: 0;">
+                                <img src="./png images/product1.png" class="card-img-top" alt="image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dummy Text Lorel</h5>
+                                    <p><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                                            class="offer">(60%Off)</span></p>
+                                    <div class="stars-group d-flex justify-content-center align-items-center">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star-empty.png" alt="star-rating"
+                                            role="icon" aria-label="star rating">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-12 col-md-4" style="width: 18rem; border-width: 0;">
+                                <img src="./png images/product2.png" class="card-img-top" alt="image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dummy Text Lorel</h5>
+                                    <p><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                                            class="offer">(60%Off)</span></p>
+                                    <div class="stars-group d-flex justify-content-center align-items-center">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star-empty.png" alt="star-rating"
+                                            role="icon" aria-label="star rating">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-12 col-md-4" style="width: 18rem; border-width: 0;">
+                                <img src="./png images/product3.png" class="card-img-top" alt="image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dummy Text Lorel</h5>
+                                    <p><strong>Rs 1099.0</strong> <del>Rs 2748.0</del><span
+                                            class="offer">(60%Off)</span></p>
+                                    <div class="stars-group d-flex justify-content-center align-items-center">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star.png" alt="star-rating" role="icon"
+                                            aria-label="star rating">
+                                        <img class="stars" src="./png images/star-empty.png" alt="star-rating"
+                                            role="icon" aria-label="star rating">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#carouselexample" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselexample" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Bottom carousel Slides Section End -->
+    <!-- PRODUCT VIEW PAGE END -->
+
+    <!-- Start of Payment and Help -->
+    <section class="payment-help mt-5" aria-label="payments and help section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center text-center">
+                    <img src="./png images/payments icon.png" alt="securepay" role="img" aria-label="secure pay image">
+                    <h2>100% SECURE PAYMENTS</h2>
+                    <p>secure bank transactions on website.<br>
+                        payments are under encrypted network.</p>
+                </div>
+                <div class="col col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center text-center">
+                    <img src="./png images/trust pay icon.png" alt="trustpay" role="img" aria-label="trust pay image">
+                    <h2>TRUST PAY</h2>
+                    <p>It secures instant bank transfers<br>
+                        which leads secure.</p>
+                </div>
+                <div class="col col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center text-center">
+                    <img src="./png images/help center icon.png" alt="helpcenter" role="img"
+                        aria-label="help center image">
+                    <h2>HELP CENTER</h2>
+                    <p>Call if user have any queries<br>
+                        or email us.</p>
+                </div>
+                <div class="col col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center text-center">
+                    <img src="./png images/shop on the go icon.png" alt="shopongo" role="img"
+                        aria-label="shop on go image">
+                    <h2>SHOP ON THE GO</h2>
+                    <p>It has online shopping with<br>
+                        home delivery of collections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End of Payments and Help -->
+
+    <!-- Footer Start -->
+    <footer class="mt-5">
+        <div class="container-fluid w-75">
+            <div class="row">
+                <div
+                    class="col col-xl-2 col-lg-3 col-md-3 col-sm-4 d-flex flex-column align-items-start justify-content-start">
+                    <h3>POLICY INFO</h3>
+                    <a href="" role="link">Privacy Policy</a>
+                    <a href="" role="link">Terms of Sale</a>
+                    <a href="" role="link">Terms of Use</a>
+                    <a href="" role="link">Report Abuse and
+                        Takedown Policy</a>
+                </div>
+                <div class="col col-xl-2 col-lg-3 col-md-2 col-sm-3 d-flex flex-column align-items-start">
+                    <h3>COMPANY</h3>
+                    <a href="" role="link">About Us</a>
+                    <a href="" role="link">Core Values</a>
+                    <a href="" role="link">Careers</a>
+                    <a href="" role="link">Blog</a>
+                    <a href="" role="link">Site Map</a>
+                </div>
+                <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-5 d-flex flex-column align-items-start">
+                    <h3>SNAPDEAL BUSINESS</h3>
+                    <a href="" role="link">Shopping App</a>
+                    <a href="" role="link">Sell on Snapdeal</a>
+                    <a href="" role="link">Advertise on
+                        Snapdeal</a>
+                    <a href="" role="link">Media Enquiries</a>
+                    <a href="" role="link">Be an Affiliate</a>
+                </div>
+                <div
+                    class="col col-xl-2 col-lg-3 col-md-3 col-sm-4 mt-md-0 mt-sm-5 d-flex flex-column align-items-start">
+                    <h3>NEED HELP ?</h3>
+                    <a href="" role="link">Contact Us</a>
+                    <a href="" role="link">FAQ</a>
+                    <a href="" role="link">Online Shopping</a>
+                </div>
+                <div class="col col-xl-3 col-lg-5 col-md-6 col-sm-7 mt-xl-0 mt-lg-5 mt-md-5 mt-sm-5">
+                    <h3>SUBSCRIBE</h3>
+                    <div class="input-group mb-2 d-flex justify-content-center align-items-center">
+                        <input type="text" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-outline-secondary d-flex align-items-center" type="button"
+                            id="button-addon2">Search</button>
+                    </div>
+                    <small>Register now to get updates on promotions and coupons.<br> Or <a href="">Download
+                            App</a></small>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="bottom-footer container-fluid w-75">
+            <div class="row">
+                <div class="col d-flex flex-row justify-content-between">
+                    <div class="box-1">
+                        <h3>PAYMENT</h3>
+                        <div class="card-holder">
+                            <img src="./png images/payment card1.png" alt="card1" role="icon" aria-label="card image">
+                            <img src="./png images/payment card2.png" alt="card2" role="icon" aria-label="card image">
+                            <img src="./png images/payment card3.png" alt="card3" role="icon" aria-label="card image">
+                            <img src="./png images/payment card4.png" alt="cod" role="icon" aria-label="card image">
+                            <img src="./png images/payment card5.png" alt="netbanking" role="icon"
+                                aria-label="card image">
+                        </div>
+                    </div>
+                    <div class="box-2">
+                        <h3>SOCIAL</h3>
+                        <div class="social-holder">
+                            <img src="./png images/footer fb icon.png" alt="facebook" role="icon"
+                                aria-label="facebook icon">
+                            <img src="./png images/footer twitter icon.png" alt="twitter" role="icon"
+                                aria-label="twitter icon">
+                            <img src="./png images/footer youtube icon.png" alt="youtube" role="icon"
+                                aria-label="youtube icon">
+                            <img src="./png images/footer instagram icon.png" alt="instagram" role="icon"
+                                aria-label="instagram icon">
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+    <!-- Footer End -->
+
+
+    <script src="swag of india script.js"></script>
+
+</body>
+
+</html>
